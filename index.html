@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="UTF-8">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="">
+<!-- css -->
+<link href="css/sp_style.css" rel="stylesheet" type="text/css" media="(max-width: 678px)" >
+<link href="css/style.css" rel="stylesheet" type="text/css" media="(min-width: 679px)" >
+<!-- Javascript -->
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script>
+    $(function(){
+      $('a[href^="#"]').click(function() {
+        var speed = 400; 
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+</script>
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+    window.onscroll = function (){
+      var myFade = document.getElementsByClassName("fadein");
+      for(var i = 0; i < myFade.length; i++){
+        var targetElement = myFade[i].getBoundingClientRect(); 
+        var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        var windowHeight = window.innerHeight;  
+        if (scroll > scroll + targetElement.top - windowHeight + 200){
+          myFade[i].style.opacity = "1";
+          myFade[i].style.transform = "translateY(0)";
+        }
+      }
+    }
+}, false);
+</script>
+</head>
+
+<div class="motherwrap">
+    
+</div><!---/motherwrap-->
+</body>
+</html>
+
