@@ -9,9 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="canonical" href="">
 <!-- css -->
-<link rel="stylesheet" href="css/sp_style.css" media="screen and (max-width:678px)">
-<link rel="stylesheet" href="css/style.css" media="screen and (min-width:679px)">
-<link rel="stylesheet" href="css/style1200.css" media="screen and (min-width:1200px)">
+<link rel="stylesheet" href="css/sp_style.css?d=032315" media="screen and (max-width: 678px)">
+<link rel="stylesheet" href="css/tab_style.css?d=032315" media="screen and (min-width:679px) and (max-width:800px)">
+<link rel="stylesheet" href="css/style.css?d=032315" media="screen and (min-width:801px)">
 <!-- Javascript -->
 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 <script>
@@ -43,28 +43,33 @@ window.addEventListener("DOMContentLoaded", function() {
 }, false);
 </script>
 <script>
-  window.addEventListener("DOMContentLoaded", function() {
-      window.onscroll = function (){
-        var myFade = document.getElementsByClassName("fadein");
-        for(var i = 0; i < myFade.length; i++){
-          var targetElement = myFade[i].getBoundingClientRect(); 
-          var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-          var windowHeight = window.innerHeight;  
-          if (scroll > scroll + targetElement.top - windowHeight + 200){
-            myFade[i].style.opacity = "1";
-            myFade[i].style.transform = "translateY(0)";
+      var ua = navigator.userAgent;
+      if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+      }else{
+        window.addEventListener("DOMContentLoaded", function() {
+          window.onscroll = function (){
+            var myFade = document.getElementsByClassName("fadein");
+            for(var i = 0; i < myFade.length; i++){
+              var targetElement = myFade[i].getBoundingClientRect(); 
+              var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+              var windowHeight = window.innerHeight;  
+              if (scroll > scroll + targetElement.top - windowHeight + 200){
+                myFade[i].style.opacity = "1";
+                myFade[i].style.transform = "translateY(0)";
+              }
+            }
           }
-        }
+      }, false);
       }
-  }, false);
-  </script>
+  })();
+</script>
 </head>
 <body>
-<main class="main-content" id="main-content">
 
+<div class="main-content" id="main-content">
   <section class="illustrationBox illustrationBox--first">
     <p class="header_logo">
-      <a href="https://www.athuman.com/">
+      <a href="https://www.athuman.com/" target="_blank">
         <img src="img/logo_human.svg" alt="HUMAN">
       </a>
     </p>
@@ -72,7 +77,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
   </section>
 
-  <section class="illustrationBox illustrationBox--small fadein">
+  <section class="illustrationBox illustrationBox--small">
     <h1 class="illustrationTitle">医療関係者。自分んたちが一番不安かもしれないのに、他の人のために、精一杯働いている。</h1>
   </section>
 
@@ -112,82 +117,94 @@ window.addEventListener("DOMContentLoaded", function() {
     <h1 class="illustrationTitle">ヒューマングループは、、そんな全てのすべての働く人が、いきいき働ける社会をつくりたい。</h1>
   </section>
 
-</main><!-- /main-content -->
+</div><!-- /main-content -->
+
+
 
 <footer>
 
 <section class="fotter-branding">
-  <p class="footer_logo">
-    <img src="img/logo_human.svg" alt="HUMAN">
-  </p>
-  <h2 class="fotter-branding__title">人を想い、世界を拓く</h2>
+  <h2 class="footer_logo">
+    <img src="img/footer-logo.svg" alt="HUMAN 人を想い、世界を拓く。" >
+  </h2>
+  
   <p class="fotter-branding__text">
   <span>人を想い、人に寄り添う。</span>
-  <span>社会を想い、社会に寄り添う。</span>
-  <br><br>
-  <span>私たちの事業がどれだけ発展しても、その軸は揺らぐことはありません。普遍的な価値だと信じるからです。</span>
-  <br><br>
+  <span >社会を想い、社会に寄り添う。</span>
+  <span>私たちの事業がどれだけ発展しても、その軸は揺らぐことはありません。<br>普遍的な価値だと信じるからです。</span>
   <span>人材もアイディアも瞬時に国境を超えて行き来する時代。</span>
-  <br><br>
   <span>私たちの価値観は、グローバルに展開していきます。</span>
-  <br><br>
-  <span>より良き世界をつくるために。</span><br>
+  <span>より良き世界をつくるために。</span>
   <span>私たちはさらにチャレンジを続けていきます。</span>
   </p>
 </section>
+
+ 　　              
+
+
+
+  　　       
 
 <nav class="footer-nav">
 
   <dl class="footer-nav__list">
     <dt>教育</dt>
     <dd>
-      <a href="https://manabu.athuman.com/">ヒューマンアカデミー株式会社</a>
-      <a href="https://human-gc.jp/">ヒューマングローバルコミュニケーションズ株式会社</a>
+      <a href="https://manabu.athuman.com/" target="_blank">ヒューマンアカデミー株式会社</a>
+    </dd>
+    <dd>
+      <a href="https://human-gc.jp/" target="_blank">ヒューマングローバルコミュニケーションズ株式会社</a>
     </dd>
   </dl>
 
   <dl class="footer-nav__list">
     <dt>人材</dt>
     <dd>
-      <a href="https://resocia.jp">ヒューマンリソシア株式会社</a>
-      <a href="https://human-touch.jp/">ヒューマンタッチ株式会社</a>
-      <a href="https://corp.daijob.com/">ヒューマングローバルタレント株式会社</a>
+      <a href="https://resocia.jp" target="_blank">ヒューマンリソシア株式会社</a>
+    </dd>
+    <dd>
+      <a href="https://human-touch.jp/" target="_blank">ヒューマンタッチ株式会社</a>
+    </dd>
+    <dd>
+      <a href="https://corp.daijob.com/" target="_blank">ヒューマングローバルタレント株式会社</a>
     </dd>
   </dl>
 
   <dl class="footer-nav__list">
     <dt>介護</dt>
     <dd>
-      <a href="https://human-lifecare.jp/">ヒューマンライフケア株式会社</a>
+      <a href="https://human-lifecare.jp/" target="_blank">ヒューマンライフケア株式会社</a>
     </dd>
   </dl>
 
   <dl class="footer-nav__list">
     <dt>保育</dt>
     <dd>
-      <a href="https://www.starchild.jp/">ヒューマンスターチャイルド株式会社</a>
-      <a href="https://human-lifecare.jp/">ヒューマンライフケア株式会社</a>
+      <a href="https://www.starchild.jp/" target="_blank">ヒューマンスターチャイルド株式会社</a>
+    </dd>
+    <dd>
+      <a href="https://human-lifecare.jp/" target="_blank">ヒューマンライフケア株式会社</a>
     </dd>
   </dl>
 
   <dl class="footer-nav__list">
     <dt>美容</dt>
     <dd>
-      <a href="https://www.dashingdiva.co.jp/">ダッシングディバインターナショナル株式会社</a>
+      <a href="https://www.dashingdiva.co.jp/" target="_blank">ダッシングディバインターナショナル株式会社</a>
     </dd>
   </dl>
 
   <dl class="footer-nav__list">
     <dt>スポーツ</dt>
     <dd>
-      <a href="https://hp.athuman.com/">ヒューマンプランニング株式会社</a>
+      <a href="https://hp.athuman.com/" target="_blank">ヒューマンプランニング株式会社</a>
     </dd>
   </dl>
 
   <dl class="footer-nav__list">
     <dt>IT</dt>
     <dd>
-      <a href="https://www.human-dc.com">ヒューマンデジタルコンサルタンツ株式会社</a>
+      <a href="https://www.human-dc.com" target="_blank">ヒューマンデジタルコンサルタンツ株式会社</a>
     </dd>
   </dl>
 

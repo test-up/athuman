@@ -1,0 +1,402 @@
+@charset "UTF-8";
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* /リセット*/
+
+div,
+dl,
+dt,
+dd,
+p,
+ul,
+li,
+ol,
+header,
+nav,
+footer,
+section,
+article,
+address {
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+/*共通*/
+html {
+    font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+    color:#000;
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+
+.fadein {
+  opacity : 0;
+  transform: translateY(26px);
+  transition: all 1.6s;
+}
+.sp{
+  display:none;
+}
+
+body{
+  background-color: #edf0f5;
+}
+
+.main-content{
+  width:100vw;
+  margin:0;
+}
+.header_logo{
+  width:15%;
+  max-width:180px;
+  height:auto;
+  position: absolute;
+  margin: 0.8vw 0 0 1.4vw;
+}
+  .header_logo img{
+    width: 100%;
+    height: auto;
+  }
+.illustrationBox{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.illustrationTitle{
+  position: absolute;
+  top:0;
+  left:0;
+  text-indent: -300%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.illustrationBox--first{
+  width:100vw;
+  height:70.81vw;
+}
+.illustrationBox--small{
+  width:88.5vw;
+  height:62.6vw;
+  margin:2rem auto 0 auto;
+}
+.illustrationBox:nth-of-type(1){
+  background-image: url(../img/pc/img_1.jpg);
+}
+.illustrationBox:nth-of-type(2){
+  background-image: url(../img/pc/img_2.jpg);
+}
+.illustrationBox:nth-of-type(3){
+  background-image: url(../img/pc/img_3.jpg);
+}
+.illustrationBox:nth-of-type(4){
+  background-image: url(../img/pc/img_4.jpg);
+}
+.illustrationBox:nth-of-type(5){
+  background-image: url(../img/pc/img_5.jpg);
+}
+.illustrationBox:nth-of-type(6){
+  background-image: url(../img/pc/img_6.jpg);
+}
+.illustrationBox:nth-of-type(7){
+  background-image: url(../img/pc/img_7.jpg);
+}
+.illustrationBox:nth-of-type(8){
+  background-image: url(../img/pc/img_8.jpg);
+}
+.illustrationBox:nth-of-type(9){
+  background-image: url(../img/pc/img_9.jpg);
+}
+.illustrationBox:nth-of-type(10){
+  background-image: url(../img/pc/img_10.jpg);
+}
+.illustrationBox:nth-of-type(11){
+  background-image: url(../img/pc/img_11.jpg);
+}
+
+footer{
+  margin-top: 4rem;
+  width:100%;
+  background-color: #fff;
+  padding: 8rem 0 3rem 0;
+}
+
+.fotter-branding{
+  width:57rem;
+  margin: 0 auto;
+}
+.footer_logo{
+  width:100%;
+}
+.footer_logo img{
+  width: 100%;
+  height: auto;
+}
+.fotter-branding__text{
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: bold;
+  margin-top: 5.6rem;
+  letter-spacing:0.08em;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav{
+  width:100vw;
+  margin-top: 4rem;
+  background-color: #F4F2ED;
+  padding: 4rem 0rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-nav__list{
+  width:62rem;
+}
+.footer-nav__list dt{
+  display: inline-block;
+  font-size: 2rem;
+  letter-spacing:0.24em;
+  font-weight: bold;
+  height: 3rem;
+}
+.footer-nav__list dt::before{
+  content:"";
+  height:0.3rem;
+  width: calc(100% - 0.24em);
+  background-color: #000;
+  margin-right: 0.24em;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.footer-nav__list dd{
+  font-size:1.4rem;
+  line-height: 1.9rem;
+  font-feature-settings: "palt";
+}
+.footer-nav__list dd:first-of-type{
+  margin-top: 3.5rem;
+}
+.footer-nav__list dd:nth-of-type(n + 2){
+  margin-top: 2.4rem;
+}
+.footer-nav__list dd:last-of-type{
+  margin-bottom: 6rem;
+}
+.footer-nav__list dd a{
+  color:#000;
+  display: inline-block;
+  padding: 0.2rem 3rem 0.2rem 0;
+  text-decoration: none;
+  height: 2rem;
+  background-image: url(../img/navicon.svg);
+  background-size: 1.78rem 1.7rem;
+  background-repeat: no-repeat;
+  background-position: top 0.1rem right ;
+  font-weight: 900;
+}
+.footer-nav__list dd a:hover{
+  text-decoration: underline;
+}
+
+
+.footer-nav__top{
+  width:11.6rem;
+  height:auto;
+  margin: 11.2rem auto 0 auto;
+}
+.footer-nav__top img {
+  width:100%;
+  height:auto;
+}
+.foote-human-logo{
+  width:38.4rem;
+  height:auto;
+  margin: 10.3rem auto 0 auto;
+}
+.foote-human-logo img{
+  width:100%;
+  height: auto;
+}
+.footer-copyright{
+  width:27.6rem;
+  margin: 7.4rem auto 3rem auto;
+}
+.footer-copyright img{
+  width: 100%;
+  height: auto;
+}
